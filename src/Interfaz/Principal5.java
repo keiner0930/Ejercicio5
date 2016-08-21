@@ -5,6 +5,8 @@
  */
 package Interfaz;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author sony
@@ -58,6 +60,12 @@ public class Principal5 extends javax.swing.JFrame {
         jLabel2.setForeground(new java.awt.Color(0, 0, 51));
         jLabel2.setText("Sueldo Base");
         jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 70, -1, -1));
+
+        txtSueldoBase.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtSueldoBaseKeyTyped(evt);
+            }
+        });
         jPanel1.add(txtSueldoBase, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 60, 100, 30));
         jPanel1.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 110, 430, 10));
 
@@ -134,7 +142,16 @@ public class Principal5 extends javax.swing.JFrame {
     private void cmdCalcularActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmdCalcularActionPerformed
      String mont,des1,des2,des3,des4;
      double op1,op2,op3,op4,total,sueldob;
-             
+      
+     if(txtSueldoBase.getText().isEmpty()){
+     getToolkit().beep();    
+     JOptionPane.showMessageDialog(this, "Digite El Sueldo Base","Error",JOptionPane.ERROR_MESSAGE);
+     txtSueldoBase.requestFocusInWindow();
+     
+     }
+   
+     else{
+           
      sueldob= Integer.parseInt(txtSueldoBase.getText());
         
      op1= (sueldob*1)/100;   
@@ -155,7 +172,7 @@ public class Principal5 extends javax.swing.JFrame {
      txtDescuento4.setText(des4);
      txtMonto.setText(mont);
      
-     
+     }
     }//GEN-LAST:event_cmdCalcularActionPerformed
 
     private void cmdBorrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmdBorrarActionPerformed
@@ -170,6 +187,14 @@ public class Principal5 extends javax.swing.JFrame {
           
         
     }//GEN-LAST:event_cmdBorrarActionPerformed
+
+    private void txtSueldoBaseKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtSueldoBaseKeyTyped
+           char c=evt.getKeyChar(); 
+     if(!Character.isDigit(c)) { 
+              getToolkit().beep();  
+              evt.consume();
+          }    
+    }//GEN-LAST:event_txtSueldoBaseKeyTyped
 
     /**
      * @param args the command line arguments
