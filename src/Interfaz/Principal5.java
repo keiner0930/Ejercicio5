@@ -94,9 +94,19 @@ public class Principal5 extends javax.swing.JFrame {
         jPanel1.add(txtDescuento4, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 250, 90, 30));
 
         cmdCalcular.setText("Calcular");
+        cmdCalcular.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cmdCalcularActionPerformed(evt);
+            }
+        });
         jPanel1.add(cmdCalcular, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 370, -1, -1));
 
         cmdBorrar.setText("Borrar");
+        cmdBorrar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cmdBorrarActionPerformed(evt);
+            }
+        });
         jPanel1.add(cmdBorrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 410, -1, -1));
 
         jLabel7.setFont(new java.awt.Font("Times New Roman", 3, 14)); // NOI18N
@@ -120,6 +130,46 @@ public class Principal5 extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void cmdCalcularActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmdCalcularActionPerformed
+     String mont,des1,des2,des3,des4;
+     double op1,op2,op3,op4,total,sueldob;
+             
+     sueldob= Integer.parseInt(txtSueldoBase.getText());
+        
+     op1= (sueldob*1)/100;   
+     op2= (sueldob*4)/100;   
+     op3= (sueldob*0.5)/100;   
+     op4= (sueldob*5)/100;     
+     total=sueldob-op1-op2-op3-op4; 
+     
+     des1=String.valueOf(op1);
+     des2=String.valueOf(op2);
+     des3=String.valueOf(op3);
+     des4=String.valueOf(op4);
+     mont=String.valueOf(total);
+     
+     txtDescuento1.setText(des1);
+     txtDescuento2.setText(des2);
+     txtDescuento3.setText(des3);
+     txtDescuento4.setText(des4);
+     txtMonto.setText(mont);
+     
+     
+    }//GEN-LAST:event_cmdCalcularActionPerformed
+
+    private void cmdBorrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmdBorrarActionPerformed
+     txtSueldoBase.setText("");
+     txtDescuento1.setText("");
+     txtDescuento2.setText("");
+     txtDescuento3.setText("");
+     txtDescuento4.setText("");
+     txtMonto.setText("");
+     
+     txtSueldoBase.requestFocusInWindow();
+          
+        
+    }//GEN-LAST:event_cmdBorrarActionPerformed
 
     /**
      * @param args the command line arguments
