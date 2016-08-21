@@ -27,17 +27,95 @@ public class Principal5 extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jPanel1 = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        txtSueldoBase = new javax.swing.JTextField();
+        jSeparator1 = new javax.swing.JSeparator();
+        jLabel3 = new javax.swing.JLabel();
+        txtDescuento1 = new javax.swing.JTextField();
+        jLabel4 = new javax.swing.JLabel();
+        txtDescuento2 = new javax.swing.JTextField();
+        jLabel5 = new javax.swing.JLabel();
+        txtDescuento3 = new javax.swing.JTextField();
+        jLabel6 = new javax.swing.JLabel();
+        txtDescuento4 = new javax.swing.JTextField();
+        cmdCalcular = new javax.swing.JButton();
+        cmdBorrar = new javax.swing.JButton();
+        jLabel7 = new javax.swing.JLabel();
+        txtMonto = new javax.swing.JTextField();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel1.setFont(new java.awt.Font("Times New Roman", 2, 36)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(0, 102, 153));
+        jLabel1.setText("Descuentos Laborales");
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 10, -1, -1));
+
+        jLabel2.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(0, 0, 51));
+        jLabel2.setText("Sueldo Base");
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 70, -1, -1));
+        jPanel1.add(txtSueldoBase, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 60, 100, 30));
+        jPanel1.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 110, 430, 10));
+
+        jLabel3.setFont(new java.awt.Font("Times New Roman", 3, 14)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(0, 0, 102));
+        jLabel3.setText("Descuento del 1% por ley de politica pública :");
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 140, -1, -1));
+
+        txtDescuento1.setEditable(false);
+        jPanel1.add(txtDescuento1, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 130, 90, 30));
+
+        jLabel4.setFont(new java.awt.Font("Times New Roman", 3, 14)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(0, 0, 102));
+        jLabel4.setText("Descuento del 4% por seguro social :");
+        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 180, -1, -1));
+
+        txtDescuento2.setEditable(false);
+        jPanel1.add(txtDescuento2, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 170, 90, 30));
+
+        jLabel5.setFont(new java.awt.Font("Times New Roman", 3, 14)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(0, 0, 102));
+        jLabel5.setText("Descuento del 0.5% por seguro forzoso :");
+        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 220, -1, -1));
+
+        txtDescuento3.setEditable(false);
+        jPanel1.add(txtDescuento3, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 210, 90, 30));
+
+        jLabel6.setFont(new java.awt.Font("Times New Roman", 3, 14)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(0, 0, 102));
+        jLabel6.setText("Descuento del 5% por caja de ahorro :");
+        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 260, -1, -1));
+
+        txtDescuento4.setEditable(false);
+        jPanel1.add(txtDescuento4, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 250, 90, 30));
+
+        cmdCalcular.setText("Calcular");
+        jPanel1.add(cmdCalcular, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 370, -1, -1));
+
+        cmdBorrar.setText("Borrar");
+        jPanel1.add(cmdBorrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 410, -1, -1));
+
+        jLabel7.setFont(new java.awt.Font("Times New Roman", 3, 14)); // NOI18N
+        jLabel7.setForeground(new java.awt.Color(0, 0, 102));
+        jLabel7.setText("Monto Total a Pagar :");
+        jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 310, -1, -1));
+
+        txtMonto.setEditable(false);
+        jPanel1.add(txtMonto, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 330, 90, 30));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 447, Short.MAX_VALUE)
         );
 
         pack();
@@ -79,5 +157,22 @@ public class Principal5 extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton cmdBorrar;
+    private javax.swing.JButton cmdCalcular;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JSeparator jSeparator1;
+    private javax.swing.JTextField txtDescuento1;
+    private javax.swing.JTextField txtDescuento2;
+    private javax.swing.JTextField txtDescuento3;
+    private javax.swing.JTextField txtDescuento4;
+    private javax.swing.JTextField txtMonto;
+    private javax.swing.JTextField txtSueldoBase;
     // End of variables declaration//GEN-END:variables
 }
